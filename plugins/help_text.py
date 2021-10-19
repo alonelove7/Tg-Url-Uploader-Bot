@@ -26,8 +26,6 @@ async def help_user(bot, update):
     forcesub = await ForceSub(bot, update)
     if forcesub == 400:
         return
-    if update.from_user.id in Config.AUTH_USERS:
-        # logger.info(update)
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.HELP_USER,
@@ -42,8 +40,6 @@ async def start(bot, update):
     forcesub = await ForceSub(bot, update)
     if forcesub == 400:
         return
-    if update.from_user.id in Config.AUTH_USERS:
-        # logger.info(update)
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.START_TEXT.format(update.from_user.first_name),
