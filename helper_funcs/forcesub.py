@@ -8,8 +8,10 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 
 
 async def ForceSub(bot: Client, cmd: Message):
+
+    update_channel = Config.UPDATES_CHANNEL
     try:
-        user = await bot.get_chat_member(chat_id=(int(Config.UPDATES_CHANNEL) if Config.UPDATES_CHANNEL.startswith("-100") else Config.UPDATES_CHANNEL), user_id=cmd.from_user.id)
+        user = await bot.get_chat_member(update_channel, update.chat.id)
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
