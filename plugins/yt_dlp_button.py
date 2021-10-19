@@ -320,9 +320,9 @@ async def yt_dlp_call_back(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @TeleRoidGroup"
+                caption = "© @TheTeleRoid"
                 if is_w_f:
-                    caption = "@UrlUploaderV3Bot"
+                    caption = "@TheTeleRoid"
                 for image in images:
                     if os.path.exists(str(image)):
                         if i == 0:
