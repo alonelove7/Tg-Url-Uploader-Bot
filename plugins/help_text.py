@@ -14,7 +14,7 @@ else:
 
 # the Strings used for this "thing"
 from translation import Translation
-
+from helper_funcs.forcesub import ForceSub
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
@@ -23,6 +23,9 @@ from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboa
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["help"]))
 async def help_user(bot, update):
+    forcesub = await ForceSub(bot, update)
+    if forcesub == 400:
+        return
     if update.from_user.id in Config.AUTH_USERS:
         # logger.info(update)
         await bot.send_message(
@@ -36,6 +39,9 @@ async def help_user(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 async def start(bot, update):
+    forcesub = await ForceSub(bot, update)
+    if forcesub == 400:
+        return
     if update.from_user.id in Config.AUTH_USERS:
         # logger.info(update)
         await bot.send_message(
