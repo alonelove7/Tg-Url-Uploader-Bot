@@ -1,6 +1,6 @@
 
-# Akash URL Uploader
-Based on YT-DLP 
+# TG-YTDLp Uploader
+Based on YT-DLP Uploader Bot 
 
 ## Deployment
 
@@ -30,13 +30,7 @@ To run this project, you will need to add the following environment variables to
   
 ## Authors
 
-- [@PrimeAkash](https://t.me/PrimeAkash)
-
-  
-## Acknowledgements
-
- - [XGORN](https://github.com/X-Gorn) For His X URL Bot
-
+- [YT-DLp](https://github.com/YT-DLp) 
 
   
 ## 🚀 About Me...
