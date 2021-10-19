@@ -37,9 +37,9 @@ async def help_user(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["start"]))
 async def start(bot, update):
-    forcesub = await ForceSub(bot, update)
-    if forcesub == 400:
-        return
+    #forcesub = await ForceSub(bot, update)
+    #if forcesub == 400:
+        #return
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.START_TEXT.format(update.from_user.first_name),
