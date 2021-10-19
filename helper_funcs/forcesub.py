@@ -11,7 +11,7 @@ async def ForceSub(bot: Client, cmd: Message):
 
     update_channel = Config.UPDATES_CHANNEL
     try:
-        user = await bot.get_chat_member(update_channel, update.chat.id)
+        user = await bot.get_chat_member(update_channel, cmd.chat.id)
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
