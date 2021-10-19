@@ -45,11 +45,11 @@ async def start(bot, update):
                 [
                     [
                         InlineKeyboardButton(
-                            "Source", url="https://github.com/NasirHossainAkash/AkashURLUploader"
+                            "sᴜᴘᴘᴏʀᴛ", url="https://t.me/TeleRoid14"
                         ),
-                        InlineKeyboardButton("Project Channel", url="https://t.me/PrimeCheat"),
+                        InlineKeyboardButton("ᴄʜᴀɴɴᴇʟ", url="https://t.me/TeleRoidGroup"),
                     ],
-                    [InlineKeyboardButton("Author", url="https://t.me/PrimeAkash")],
+                    [InlineKeyboardButton("ᴅᴇᴠᴇʟᴏᴘᴇʀ", url="https://t.me/TheTeleRoid")],
                 ]
             ),
             reply_to_message_id=update.message_id
