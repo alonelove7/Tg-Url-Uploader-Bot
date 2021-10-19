@@ -28,3 +28,5 @@ class Config(object):
     PROCESS_MAX_TIMEOUT = 3600
     # watermark file
     DEF_WATER_MARK_FILE = ""
+    # for subscribe the channel
+    UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", None)
