@@ -75,4 +75,4 @@ async def _help(bot, msg):
              msg.chat.id,
              "**Here's How to Use Me **\n" + Data.HELP,
              reply_markup=InlineKeyboardMarkup(Data.home_buttons)
-    )
+         )
