@@ -54,3 +54,16 @@ async def _help(bot, msg):
              "**Here's How to Use Me **\n" + Data.HELP,
              reply_markup=InlineKeyboardMarkup(Data.home_buttons)
          )
+
+@pyrogram.Client.on_message(pyrogram.filters.private & filters.incoming & filters.command("start"))
+async def start(bot, msg):
+    forcesub = await ForceSub(bot, update)
+    if forcesub == 400:
+        return
+        user = await bot.get_me()
+	   mention = user["mention"]
+	      await bot.send_message(
+		  msg.chat.id,
+		    Data.START.format(msg.from_user.mention, mention),
+		       reply_markup=InlineKeyboardMarkup(Data.buttons)
+	)
