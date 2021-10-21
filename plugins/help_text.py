@@ -21,3 +21,12 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
 
 
+@Client.on_message(filters.private & filters.incoming & filters.command("start"))
+async def start(bot, msg):
+	user = await bot.get_me()
+	mention = user["mention"]
+	await bot.send_message(
+		msg.chat.id,
+		Script.START.format(msg.from_user.mention, mention),
+		reply_markup=InlineKeyboardMarkup(Script.buttons)
+	)
