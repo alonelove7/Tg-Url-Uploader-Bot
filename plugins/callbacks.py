@@ -1,4 +1,3 @@
-from script import Script
 from pyrogram import Client
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 
