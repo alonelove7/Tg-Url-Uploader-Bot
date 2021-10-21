@@ -67,12 +67,12 @@ async def start(bot, update):
 
 @pyrogram.Client.on_message(pyrogram.filters.private & filters.incoming & filters.command("help"))
 async def _help(bot, msg):
-     forcesub = await ForceSub(bot, update)
-     if forcesub == 400:
+    forcesub = await ForceSub(bot, update)
+    if forcesub == 400:
         return
         async def _help(bot, msg):
-    await bot.send_message(
-        msg.chat.id,
-        "**Here's How to Use Me **\n" + Data.HELP,
-        reply_markup=InlineKeyboardMarkup(Data.home_buttons)
+        await bot.send_message(
+             msg.chat.id,
+             "**Here's How to Use Me **\n" + Data.HELP,
+             reply_markup=InlineKeyboardMarkup(Data.home_buttons)
     )
