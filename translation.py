@@ -17,17 +17,7 @@ URL | filename | username | password"""
     DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
     CUSTOM_CAPTION_UL_FILE = "{}"
     NO_VOID_FORMAT_FOUND = "ERROR...\n<b>YouTubeDL</b> said: {}"
-    HELP_USER = """How to Use Me? Follow These steps!
-    
-📌 Send url (example.domain/File.mp4 | New Filename.mp4).
-📌 Send Image As Custom Thumbnail (Optional).
-📌 Select the button.
-   SVideo - Give File as video with Screenshots
-   DFile  - Give File (video) as file with Screenshots
-   Video  - Give File as video without Screenshots
-   File   - Give File without Screenshots
 
-If bot didn't respond, contact @TheTeleRoid"""
     REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "Reply /genthumbnail to a media album, to generate custom thumbnail"
     ERR_ONLY_TWO_MEDIA_IN_ALBUM = "Media Album should contain only two photos. Please re-send the media album, and then try again, or send only two photos in an album."
     CANCEL_STR = "Process Cancelled"
