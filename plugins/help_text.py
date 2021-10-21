@@ -67,6 +67,6 @@ async def start(bot, update):
 
 @pyrogram.Client.on_message(filters.private & filters.incoming & filters.command("help"))
 async def _help(bot, msg):
-     #forcesub = await ForceSub(bot, update)
-    #if forcesub == 400:
-        #return
+     forcesub = await ForceSub(bot, update)
+     if forcesub == 400:
+        return
