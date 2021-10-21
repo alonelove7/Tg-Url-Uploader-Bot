@@ -68,7 +68,7 @@ async def start(bot, msg):
 		       reply_markup=InlineKeyboardMarkup(Data.buttons)
 	 )
 
-@pyrogram.Client.on_message(filters.private & filters.incoming & filters.command("about"))
+@pyrogram.Client.on_message(pyrogram.filters.private & filters.incoming & filters.command("about"))
 async def about(bot, msg):
     forcesub = await ForceSub(bot, update)
     if forcesub == 400:
