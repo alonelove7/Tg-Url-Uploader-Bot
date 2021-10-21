@@ -14,7 +14,6 @@ else:
 
 # the Strings used for this "thing"
 from script import Script
-from helper_funcs.forcesub import ForceSub
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
