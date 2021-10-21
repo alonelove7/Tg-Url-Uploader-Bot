@@ -44,26 +44,11 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@pyrogram.Client.on_message(pyrogram.filters.command(["help"]))
-async def help_user(bot, update):
-    forcesub = await ForceSub(bot, update)
-    if forcesub == 400:
-        return
-        await bot.send_message(
-            chat_id=update.chat.id,
-            text=Script.HELP_TEXT,
-            parse_mode="html",
-            disable_web_page_preview=True,
-            reply_to_message_id=update.message_id
-        )
-
-
 @pyrogram.Client.on_message(pyrogram.filters.private & filters.incoming & filters.command("help"))
 async def _help(bot, msg):
     forcesub = await ForceSub(bot, update)
     if forcesub == 400:
         return
-        async def _help(bot, msg):
         await bot.send_message(
              msg.chat.id,
              "**Here's How to Use Me **\n" + Data.HELP,
