@@ -65,7 +65,7 @@ async def start(bot, update):
             text=Script.START_TEXT.format(update.from_user.first_name),
             reply_markup=InlineKeyboardMarkup
 
-@pyrogram.Client.on_message(filters.private & filters.incoming & filters.command("help"))
+@pyrogram.Client.on_message(pyrogram.filters.private & filters.incoming & filters.command("help"))
 async def _help(bot, msg):
      forcesub = await ForceSub(bot, update)
      if forcesub == 400:
