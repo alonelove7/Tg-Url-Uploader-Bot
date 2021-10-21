@@ -1,9 +1,9 @@
 from pyrogram.types import InlineKeyboardButton
 
 
-class Data:
+class Script:
     # Start Message
-    START = """
+    START_TEXT = """
 Hey {}
 
 I am Fastest Url Uploader Bot. 
@@ -29,7 +29,7 @@ Made With 💕 By @Tellybots_4u
     ]
 
     # Help Message
-    HELP = """
+    HELP_TEXT = """
 Just send me the media and you will get the link!
 
  **Available Commands** 
@@ -40,7 +40,7 @@ Just send me the media and you will get the link!
     """
 
     # About Message
-    ABOUT = """
+    ABOUT_TEXT = """
 **About This Bot** 
 
 A telegram Fastest Url Uploader Bot 
