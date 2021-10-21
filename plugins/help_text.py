@@ -21,38 +21,4 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@pyrogram.Client.on_message(pyrogram.filters.private & filters.incoming & filters.command("help"))
-async def _help(bot, msg):
-    forcesub = await ForceSub(bot, update)
-    if forcesub == 400:
-        return
-        await bot.send_message(
-             msg.chat.id,
-             "**Here's How to Use Me **\n" + Script.HELP_TEXT,
-             reply_markup=InlineKeyboardMarkup(Script.home_buttons)
-         )
-
-@pyrogram.Client.on_message(pyrogram.filters.private & filters.incoming & filters.command("start"))
-async def start(bot, msg):
-    forcesub = await ForceSub(bot, update)
-    if forcesub == 400:
-        return
-        user = await bot.get_me()
-	   mention = user["mention"]
-	      await bot.send_message(
-		  msg.chat.id,
-		    Script.START_TEXT.format(msg.from_user.mention, mention),
-		       reply_markup=InlineKeyboardMarkup(Script.buttons)
-	 )
-
-@pyrogram.Client.on_message(pyrogram.filters.private & filters.incoming & filters.command("about"))
-async def about(bot, msg):
-    forcesub = await ForceSub(bot, update)
-    if forcesub == 400:
-        return
-        await bot.send_message(
-          msg.chat.id,
-            Script.ABOUT_TEXT,
-             disable_web_page_preview=True,
-               reply_markup=InlineKeyboardMarkup(Script.home_buttons),
-         )
+.
