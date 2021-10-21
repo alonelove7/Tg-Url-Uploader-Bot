@@ -67,3 +67,15 @@ async def start(bot, msg):
 		    Data.START.format(msg.from_user.mention, mention),
 		       reply_markup=InlineKeyboardMarkup(Data.buttons)
 	 )
+
+@pyrogram.Client.on_message(filters.private & filters.incoming & filters.command("about"))
+async def about(bot, msg):
+    forcesub = await ForceSub(bot, update)
+    if forcesub == 400:
+        return
+        await bot.send_message(
+          msg.chat.id,
+            Data.ABOUT,
+             disable_web_page_preview=True,
+               reply_markup=InlineKeyboardMarkup(Data.home_buttons),
+         )
