@@ -20,7 +20,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types.bots_and_keyboards import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Client.on_message(filters.command(["start"]) & filters.private)
+@pyrogram.Client.on_message(filters.command(["start"]) & filters.private)
 async def start(bot, update):
     await update.reply_text(
         text=Script.START_TEXT.format(update.from_user.mention),
@@ -29,7 +29,7 @@ async def start(bot, update):
     )
 
 
-@Client.on_message(filters.command(["help"]) & filters.private)
+@prrogram.Client.on_message(filters.command(["help"]) & filters.private)
 async def help(bot, update):
     await update.reply_text(
         text=Script.HELP_TEXT,
@@ -37,7 +37,7 @@ async def help(bot, update):
         reply_markup=Script.HELP_BUTTONS
     )
 
-@Client.on_message(filters.command(["about"]) & filters.private)
+@pyrogram.Client.on_message(filters.command(["about"]) & filters.private)
 async def about(bot, update):
     await update.reply_text(
         text=Script.ABOUT_TEXT,
